@@ -1,0 +1,171 @@
+.main-frame{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(100, 250, 100, .1); */
+}
+
+.complain-list-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.complain-item{
+    width: 300px;
+    height: 230px;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+
+.complain-item:hover{
+    background: rgba(109, 150, 129, 0.25);
+}
+
+.complain-item h3{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.complain-item .content{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.complain-item button{
+    visibility: visible;
+    width: 120px;
+    height: 30px;
+    margin-top: 20px;
+    /* background-color: aquamarine; */
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.complain-item .normal-button{
+    background-color: aquamarine;
+}
+
+.complain-item .done-button{
+    background-color: orange;
+}
+
+.complain-item button:hover{
+    background-color:antiquewhite;
+}
+
+
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+.modal-content {
+    overflow: hidden;
+    background-color: rgba(10, 77, 82, 0.95);
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    height: 550px;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+}
+
+.modal-content .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #8a9a9b;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modal-content .icon-close:hover{
+    background: #fff;
+    color: #162938;
+}
+
+/* Complain Form */
+
+.modal-content .complain-container .complain-form{
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.modal-content .complain-container .form-heading{
+    color: #fff;
+    text-align: center;
+}
+
+.modal-content .complain-container .form-description{
+    color: #fff;
+    text-align: center;
+}
+
+.modal-content .complain-container .form-label{
+    color: #fff;
+    text-align: center;
+}
+
+.modal-content .complain-container .form-sel{
+    border-radius: 20px;
+    
+}
+
+.modal-content .complain-container .center-container {
+    display: flex;
+    flex-direction: row; /* stacks your items vertically */
+    align-items: center; /* aligns items horizontally in the container */
+    justify-content: center;
+}
+
+.modal-content .complain-container .form-button{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: aquamarine;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+}
+
+.modal-content .complain-container .form-button:hover{
+    background-color:antiquewhite;
+} 

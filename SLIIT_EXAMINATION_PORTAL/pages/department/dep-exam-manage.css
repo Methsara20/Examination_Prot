@@ -1,0 +1,313 @@
+.main-frame{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(100, 250, 100, .1); */
+}
+
+.exam-manage-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.exam-manage-item{
+    width: 300px;
+    height: 200px;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.exam-manage-item:hover{
+    background: rgba(109, 150, 129, 0.25);
+}
+
+.exam-manage-item h3{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.exam-manage-item .icon{
+    width: 100px;  
+    height: 100px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.exam-manage-item button{
+    visibility: visible;
+    width: 100px;
+    height: 30px;
+    margin-top: 40px;
+    background-color: aquamarine;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.exam-manage-item button.create{
+    background-color: aquamarine;
+}
+
+.exam-manage-item button.edit{
+    background-color:burlywood;
+}
+
+.exam-manage-item button.delete{
+    background-color: brown;
+}
+
+.exam-manage-item button:hover{
+    background-color:antiquewhite;
+}
+
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+.modal-content {
+    overflow: hidden;
+    background-color: rgba(10, 77, 82, 0.95);
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    height: 550px;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+}
+
+.modal-content h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Main Exam Styles */
+
+.preserve-space {
+    white-space: pre-wrap;
+}
+
+.modal-content .main-exam-detail{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 100px;
+    width: 350px;
+}
+
+.modal-content .main-exam-detail .exam-form{
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.modal-content .main-exam-detail .form-label{
+    color: #fff;
+    text-align: center;
+}
+
+.modal-content .main-exam-detail .form-sel{
+    border-radius: 20px;
+}
+
+.modal-content .main-exam-detail .form-input-normal{
+    border-radius: 10px;
+}
+
+.modal-content .main-exam-detail .form-input-large{
+    width: 165px;
+    border-radius: 10px;
+    resize: none;
+}
+
+.modal-content .main-exam-detail .form-input-date{
+    width: 165px;
+    border-radius: 10px;
+}
+
+.modal-content .main-exam-detail .form-button{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    top: 200px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.modal-content .main-exam-detail .button-add{
+    
+    background-color: aquamarine;
+    border: 2px solid rgba(255, 255, 255, .5);
+}
+
+.modal-content .main-exam-detail .button-edit{
+    
+    background-color: burlywood;
+    border: 2px solid rgba(255, 255, 255, .5);
+}
+
+.modal-content .main-exam-detail .button-delete{
+    
+    background-color: brown;
+    border: 2px solid rgba(255, 255, 255, .5);
+}
+
+.modal-content .main-exam-detail .form-button:hover{
+    background-color:antiquewhite;
+} 
+
+.modal-content .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #8a9a9b;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modal-content .icon-close:hover{
+    background: #fff;
+    color: #162938;
+}
+
+.modal-content .modal-button{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    top: 505px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.modal-content .button-submit{
+    
+    background-color: aquamarine;
+    border: 2px solid rgba(255, 255, 255, .5);
+}
+
+.modal-content .modal-button:hover{
+    background-color:antiquewhite;
+}
+
+/* End of Main Exam Styles */
+
+/* Quiz Container */
+
+.modal-content .exam-container{
+    position: relative;
+    height: 150px;
+    width: 420px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    margin-top: 5vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    background-color: rgba(99, 66, 66, 0.1);
+
+}
+
+.modal-content .exam-container .quiz-form{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; 
+    margin-top: 10px;
+    min-height: 100px;
+    width: 390px;
+    border-radius: 10px;
+    background-color: #36727c;
+}
+
+.modal-content .exam-container .quiz-form .quiz-label{
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content .exam-container .quiz-form .quiz-textarea{
+    width: 350px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 10px;
+    font-weight: 600;
+    resize: none;
+}
+
+.modal-content .exam-container .quiz-form .quiz-radio{
+    
+    margin-left: 5px;
+}
+
+.modal-content .exam-container .quiz-form .quiz-button{
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.modal-content .exam-container .quiz-form .button-delete{
+    
+    background-color: brown;
+    border: 2px solid rgba(255, 255, 255, .5);
+}
+
+.modal-content .exam-container .quiz-form .button-delete:hover{
+    background-color:antiquewhite;
+} 

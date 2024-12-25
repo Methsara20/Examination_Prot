@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Portal</title>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="it-support-dashboard.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2 id="sidebar-heading">Sidebar</h2>
+        <ul>
+            <li id="it-support-dashboard">
+                <a href="#">
+                    <span class="icon">
+                        <img src="../../assets/svg/home.svg" alt="Home Icon"/>
+                    </span>
+                    Home
+                </a>
+            </li>
+            <li id="complain-review">
+                <a href="#">
+                    <span class="icon">
+                        <img src="../../assets/svg/bar-chart.svg" alt="Exam Icon"/>
+                    </span>
+                    Task
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2 class="logo wrapper-logo" id="company-logo">Logo</h2>
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                <button class="login" onclick="logout()">Logout</button>
+            </nav>
+        </header>
+        <div class="content-area">
+            <div class="main-frame">
+                <div class="dash-container">
+                    <div class="dash-item" id="complain-review">
+                        <h2>Task</h2>
+                        <span class="icon">
+                            <img src="../../assets/svg/id-card.svg" alt="Email Icon"/>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    <script src="../../scripts/common/portal.js"></script>
+    <script src="../../scripts/api/loginApi.js"></script>
+    <script src="../../scripts/common/loggin-handler.js"></script>
+    <script src="../../scripts/common/dashboard-manager.js"></script>
+    <script src="../../scripts/common/side-panel.js"></script>
+</body>
+</html>

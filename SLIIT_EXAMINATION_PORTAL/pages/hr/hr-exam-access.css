@@ -1,0 +1,193 @@
+.main-frame{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(100, 250, 100, .1); */
+}
+
+.exam-access-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.exam-access-item{
+    width: 300px;
+    height: 230px;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.exam-access-item:hover{
+    background: rgba(109, 150, 129, 0.25);
+}
+
+.exam-access-item h3{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.exam-access-item .start-date{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.exam-access-item .start-time{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.exam-access-item .duration{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.exam-access-item button{
+    visibility: visible;
+    width: 120px;
+    height: 30px;
+    /* margin-top: 60px; */
+    background-color: aquamarine;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    
+}
+
+.exam-access-item button:hover{
+    background-color:antiquewhite;
+}
+
+
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+.modal-content {
+    overflow: hidden;
+    background-color: rgba(10, 77, 82, 0.95);
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    height: 330px;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+}
+
+.modal-content h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.modal-content button{
+    position: relative;
+    height: 30px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(255, 255, 255, .5);
+    background-color: aquamarine;
+    border-radius: 20px;
+    bottom: 4vh;
+}
+
+.modal-content button:hover{
+    background-color:antiquewhite;
+}
+
+.modal-content .emp-container{
+    position: relative;
+    height: 150px;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    margin-top: 10vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    background-color: rgba(99, 66, 66, 0.1);
+
+}
+
+.modal-content .emp-container .cb-emp{
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.modal-content .emp-container .cb-emp-label{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.modal-content .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #8a9a9b;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modal-content .icon-close:hover{
+    background: #fff;
+    color: #162938;
+}
+
+.modal-close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+

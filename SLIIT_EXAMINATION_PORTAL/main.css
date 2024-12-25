@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #8a9a9b;
+    margin: 30px 0;
+}
+
+
+
+/* SVG icon color #b3c3c4 */
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #8a9a9b;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box.has-content label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #d2dfe0;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('./assets/img/login-cover.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: #162938; */
+    z-index: 99;
+}
+
+.logo{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+ .navigation .login{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .login:hover{
+    background: #fff;
+    color: #162938;
+}
+
+.wrapper{
+    display: flex;
+    position: relative;
+}
+
+.wrapper .sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(10, 77, 82, 0.95);
+    padding: 30px 0;
+}
+
+.wrapper .sidebar h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+    padding: 15px;
+    border-top: 2px solid rgba(21, 95, 85, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.wrapper .sidebar ul li.active{
+    background: #185036;;
+}
+
+.wrapper .sidebar ul li:hover{
+    background: #276347;
+}
+
+.wrapper .sidebar ul li a{
+    color: #bdb8d7;
+    display: block;
+    margin-left: 30px;
+}
+
+.wrapper .sidebar ul li .icon{
+    width: 20px;  
+    height: 20px; 
+    position: absolute;
+    left: 10px;
+}
+
+.wrapper .main-content{
+    position: relative;
+    justify-content: center;
+    margin-left: 250px; 
+}
+
+.logo{
+    width: calc(100% - 250px);
+}
+
+.wrapper-logo{
+    margin-left: 200px; 
+}
+
+.wrapper .main-content .header{
+    padding: 20px;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .content-area{
+    display: grid;
+    margin-top: 100px;
+    width: calc(100vw - 250px);
+    height: calc(100vh - 100px);
+}
+
+
+.login-wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.login-wrapper.active-popup{
+    transform: scale(1);
+}
+
+.login-wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.login-wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #8a9a9b;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.login-wrapper .icon-close:hover{
+    background: #fff;
+    color: #162938;
+}
+
+
+.form-box h2{
+    font-size: 2em;
+    color: #c3d2d3;
+    text-align: center;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: #d2dfe0;
+    font-weight: 500;
+    margin: 0 15px 15px;
+    display: flex;
+    justify-content: flex-end; /* Aligns content to the right side */
+}
+
+.remember-forgot a{
+    color: #1ed891;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #8a9a9b;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #d2dfe0;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background: #fff;
+    color: #162938;
+}
+
+
+.error {
+    margin: 5px 0 0 5px;
+    display: flex;
+    justify-content: flex-start;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s;
+}
+
+.error.has-error{
+    opacity: 1;
+    visibility: visible;
+}
+
+.error .login-error{
+    font-weight: 600; 
+    color: rgb(223, 22, 22);
+}
+
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Manage</title>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="dep-exam-manage.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2 id="sidebar-heading">Sidebar</h2>
+        <ul>
+            <li id="dep-dashboard">
+                <a href="#">
+                    <span class="icon">
+                        <img src="../../assets/svg/home.svg" alt="Home Icon"/>
+                    </span>
+                    Home
+                </a>
+            </li>
+            <li id="dep-exam-manage">
+                <a href="#">
+                    <span class="icon">
+                        <img src="../../assets/svg/bar-chart.svg" alt="Exam Icon"/>
+                    </span>
+                    Manage Exams
+                </a>
+            </li>
+            <li id="dep-complains">
+                <a href="#">
+                    <span class="icon">
+                        <img src="../../assets/svg/bar-chart.svg" alt="Exam Icon"/>
+                    </span>
+                    Complains
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2 class="logo wrapper-logo" id="company-logo">Logo</h2>
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                <button class="login" onclick="logout()">Logout</button>
+            </nav>
+        </header>
+        <div class="content-area">
+            <div class="main-frame">
+                <div class="exam-manage-container">
+                    <!-- Modal Structure -->
+
+                    <div id="form-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="icon-close" onclick="CloseExamManageModal()">
+                                <img src="../../assets/svg/close.svg" alt="Close Icon"/>
+                            </span>
+                            <div>
+                                <h2>Modal Form</h2>
+                                <div class="exam-container">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="../../scripts/common/utils.js"></script>
+    <script src="../../scripts/common/portal.js"></script>
+    <script src="../../scripts/api/loginApi.js"></script>
+    <script src="../../scripts/api/examApi.js"></script>
+    <script src="../../scripts/api/employeeApi.js"></script>
+    <script src="../../scripts/common/loggin-handler.js"></script>
+    <script src="../../scripts/common/exam-handler.js"></script>
+    <script src="../../scripts/common/side-panel.js"></script>
+    <script src="../../scripts/department/dep-exam-manage.js"></script>
+</body>
+</html>

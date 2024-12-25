@@ -1,0 +1,190 @@
+.main-frame{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(100, 250, 100, .1); */
+}
+
+.exam-list-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.exam-item{
+    width: 300px;
+    height: 230px;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.exam-item:hover{
+    background: rgba(109, 150, 129, 0.25);
+}
+
+.exam-item h3{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.exam-item .start-date{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.exam-item .start-time{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.exam-item .duration{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.exam-item button{
+    visibility: visible;
+    width: 120px;
+    height: 30px;
+    /* margin-top: 60px; */
+    background-color: aquamarine;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.exam-item button:hover{
+    background-color:antiquewhite;
+}
+
+.exam-item button.deactivate{
+    visibility: hidden;
+}
+
+
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+.modal-content {
+    overflow: hidden;
+    background-color: rgba(10, 77, 82, 0.95);
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    height: 550px;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+}
+
+.modal-content .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #8a9a9b;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modal-content .icon-close:hover{
+    background: #fff;
+    color: #162938;
+}
+
+/* Exam Form */
+
+.modal-content .exam-container .emp-form{
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.modal-content .exam-container .form-heading{
+    color: #fff;
+    text-align: center;
+}
+
+.modal-content .exam-container .form-description{
+    color: #fff;
+    text-align: center;
+}
+
+.modal-content .exam-container .form-quiz{
+    color: #fff;
+    text-align:left;
+}
+
+.modal-content .exam-container .form-radio{
+    margin-top: 30px;
+}
+
+.modal-content .exam-container .form-label{
+    color: #fff;
+}
+
+.modal-content .exam-container .button-next{
+    
+    background-color: aquamarine;
+    border: 2px solid rgba(255, 255, 255, .5);
+    bottom: 30px;
+}
+
+.modal-content .exam-container .form-button{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.modal-content .exam-container .form-button:hover{
+    background-color:antiquewhite;
+} 
+
+.modal-content .exam-container .button-start{
+    
+    background-color: aquamarine;
+    border: 2px solid rgba(255, 255, 255, .5);
+    margin-top: 30px;
+}
